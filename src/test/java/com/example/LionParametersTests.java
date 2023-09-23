@@ -12,14 +12,14 @@ public class LionParametersTests {
     private final String sex;
     private final boolean hasMane;
 
-    public LionParametersTests(String sex, boolean hasMane) throws Exception {
+    public LionParametersTests(String sex, boolean hasMane) {
         this.sex = sex;
         this.hasMane = hasMane;
     }
 
     @Parameterized.Parameters
     public static Object[][] setSex() {
-        return new Object[][] {
+        return new Object[][]{
                 {"Самец", true},
                 {"Самка", false}
         };

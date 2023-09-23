@@ -35,14 +35,14 @@ public class FelineTests {
     public void testFamily() {
         String actualFamily = otherFeline.getFamily();
         String expectedFamily = "Кошачьи";
-        assertEquals("Все кошки относятся к семейсту Кошачьи!", expectedFamily,actualFamily);
+        assertEquals("Все кошки относятся к семейсту Кошачьи!", expectedFamily, actualFamily);
     }
 
     @Test
     public void testKittens() {
         int actualKittens = otherFeline.getKittens();
         int expectedKittens = 1;
-        assertEquals("У этой кошки не один котёнок!",expectedKittens, actualKittens);
+        assertEquals("У этой кошки не один котёнок!", expectedKittens, actualKittens);
     }
 
     @Test
