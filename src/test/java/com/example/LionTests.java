@@ -9,6 +9,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LionTests {
@@ -17,13 +18,17 @@ public class LionTests {
     Feline feline;
 
     @Test
-    public void TestNoSex() {
-        try {
-            Lion lion = new Lion("Гермафродит", feline);
-        } catch (Exception e) {
-            assertEquals("Используйте допустимые значения пола животного - самец или самка", e.getMessage());
-        }
+    public void testNoSex() {
+//        try {
+//            Lion lion = new Lion("Гермафродит", feline);
+//            lion.doesHaveMane();
+//        } catch (Exception e) {
+//            assertEquals("Используйте допустимые значения пола животного - самец или самка", e.getMessage());
+//        }
+        //        пропробуем по-другому
+        assertThrows(Exception.class, () -> new Lion("Гермафродит", feline));
     }
+
 
     @Test
     public void testGetKittensCallsFelineGetKittens() throws Exception {
